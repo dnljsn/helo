@@ -1,0 +1,19 @@
+.login-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.bank-logo{
+    width: 200px;
+    margin: 50px 0px;
+}
+
+button{
+    width: 100px;
+    height: 30px;
+    border-radius: 3px;
+    margin-right: 10px;
+    margin-top: 10px;
+
+}
