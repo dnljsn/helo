@@ -25,7 +25,8 @@ app.use(session({
 // endpoints
 app.post('/auth/signup', authCtrl.signup)
 app.post('/auth/login', authCtrl.login)
-app.get('/api/user-data', authCtrl.userData);
+app.post('/api/create-post', authCtrl.createPost)
+app.get('/auth/post/:id')
 app.get('/auth/logout', authCtrl.logout)
 
 // listen on port

@@ -46,12 +46,11 @@ module.exports = {
             res.status(401).send({ message: 'Username not found.' })
         }
     },
-    userData(req, res) {
-        if (req.session.user) {
-            res.status(200).send(req.session.user);
-        } else {
-            res.sendStatus(401);
-        }
+    async createPost(req, res) {
+        let { title, img, content } = req.body;
+        let db = req.app.get('db')
+        let [createdPost] = await db.create_post([title, img, content]);
+        res.status(200).send({ createdPost })
     },
     logout(req, res) {
         req.session.destroy();

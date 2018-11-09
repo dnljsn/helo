@@ -15,7 +15,7 @@ class Form extends Component {
     this.submit = this.submit.bind(this);
   }
   submit() {
-      axios.post('/api/v2/post', this.state)
+      axios.post('/api/create-post', this.state)
         .then(res => this.props.history.push('/dashboard'))
         .catch(err => alert('You must log in to create posts') )
 
@@ -45,7 +45,3 @@ class Form extends Component {
 }
 
 export default Form;
-
-
-// WEBPACK FOOTER //
-// ./src/components/form/Form.js
