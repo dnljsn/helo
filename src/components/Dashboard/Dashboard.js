@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { updateUser } from '../../redux/reducer';
 import { connect } from 'react-redux';
-import axios from 'axios';
+// import axios from 'axios';
 import { Link } from 'react-router-dom';
 import searchLogo from './../../assets/search_logo.png';
 import './Dashboard.css';
