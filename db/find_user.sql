@@ -1,3 +1,3 @@
 select *
-from customer
-where cust_email = $1;
+from users
+where username = $1;

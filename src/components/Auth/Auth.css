@@ -1,0 +1,71 @@
+.login-container {
+    width: 100vw;
+    height: 100vh;
+    background-image: -webkit-linear-gradient(351deg, #ff70a6, #ff9770 40%, #ffd670 73%, #e9ff70);
+    background-image: -o-linear-gradient(351deg, #ff70a6, #ff9770 40%, #ffd670 73%, #e9ff70);
+    background-image: linear-gradient(99deg, #ff70a6, #ff9770 40%, #ffd670 73%, #e9ff70);
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+        justify-content: center;
+    -ms-flex-align: center;
+        align-items: center;
+    color: white;
+}
+
+.form-container {
+    border-radius: 8px;
+    -webkit-box-shadow: 0 14px 28px 0 rgba(0, 0, 0, 0.25), 0 10px 10px 0 rgba(0, 0, 0, 0.26);
+            box-shadow: 0 14px 28px 0 rgba(0, 0, 0, 0.25), 0 10px 10px 0 rgba(0, 0, 0, 0.26);
+    background-image: -webkit-linear-gradient(353deg, #ff7a6e, #Ffd670);
+    background-image: -o-linear-gradient(353deg, #ff7a6e, #Ffd670);
+    background-image: linear-gradient(97deg, #ff7a6e, #Ffd670);
+    width: 35vw;
+    height: 55vh;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+        flex-direction: column;
+    -ms-flex-align: center;
+        align-items: center;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    padding: 20px;
+}
+
+.login-title {
+    font-size: 80px;
+    font-weight: 700;
+}
+
+.logo{
+    margin-top: 25px;
+    width: 115px;
+}
+
+h1 {
+    margin: 0px;
+    color: white;
+    font-size: 80px;
+}
+
+button{
+    width: 100px;
+    height: 30px;
+    border-radius: 3px;
+    margin-right: 10px;
+    margin-top: 10px;
+    color: white;
+    background-color: black;
+    background-image: linear-gradient(90deg, #3a3a3a, #555555 30%, #555555 70%, #3a3a3a);
+    border: #29292900
+
+}
+
+label {
+    color: white;
+    font-family: 'Open Sans';
+}

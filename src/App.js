@@ -1,20 +1,17 @@
-import React, { Component } from 'react';
-import { HashRouter, Route, Switch } from 'react-router-dom';
-import Login from './components/Login/Login';
-import Private from './components/Private/Private';
+import React from 'react';
+
+import SideNav from './components/SideNav/SideNav';
+import routes from './routes';
+
 import './App.css';
 
-class App extends Component {
-  render() {
-    return (
-      <HashRouter>
-        <Switch>
-          <Route path= '/' component={Login} exact />
-          <Route path= '/private' component={Private} />
-        </Switch>
-      </HashRouter>
-    );
-  }
+function App() {
+  return (
+    <div className='App'>
+      <SideNav />
+      {routes}
+    </div>
+  )
 }
 
 export default App;

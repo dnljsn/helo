@@ -1,17 +1,17 @@
 import React, { Component } from 'react';
-import logo from './communityBank.svg';
+import logo from './helo-logo.png';
 import axios from 'axios';
-import './Login.css';
+import './Auth.css';
 
-export default class Login extends Component {
+export default class Auth extends Component {
 
     state = {
-        email: '',
+        username: '',
         password: ''
     }
 
-    updateEmail(e) {
-        this.setState({ email: e.target.value })
+    updateUsername(e) {
+        this.setState({ username: e.target.value });
     }
 
     updatePassword(e) {
@@ -19,26 +19,26 @@ export default class Login extends Component {
     }
 
     async login() {
-        if (!this.state.email || !this.state.password) return alert('Please fill out email and password.')
+        if (!this.state.username || !this.state.password) return alert('Please fill out username and password.')
         let res = await axios.post('/auth/login', {
-            email: this.state.email,
+            username: this.state.username,
             password: this.state.password
         })
         if (res.data.message === 'loggedIn') {
-            this.props.history.push('/private')
+            this.props.history.push('/dashboard')
         } else {
             alert(res.data.message)
         }
     }
 
     async signup() {
-        if (!this.state.email || !this.state.password) return alert('Please fill out email and password.')
+        if (!this.state.username || !this.state.password) return alert('Please fill out username and password.')
         let res = await axios.post('/auth/signup', {
-            email: this.state.email,
+            username: this.state.username,
             password: this.state.password
         })
         if (res.data.message === 'loggedIn') {
-            this.props.history.push('/private')
+            this.props.history.push('/dashboard')
         } else {
             alert(res.data.message)
         }
@@ -47,21 +47,22 @@ export default class Login extends Component {
     render() {
         return (
             <div className='login-container'>
-                <img className='bank-logo' src={logo} alt="" />
-                <form>
+                <div className='form-container'>
+                    <img className='logo' src={logo} alt="" />
+                    <h1 className='login_title'>Helo</h1>
+                    <form className='login_input_box'>
                     <div>
-                        <label htmlFor="">Email:</label>
-                        <br />
-                        <input onChange={(e) => this.updateEmail(e)} type="text" />
+                        <label className='label-font' htmlFor="">Username:</label>
+                        <input onChange={(e) => this.updateUsername(e)} type="text" />
                     </div>
                     <div>
-                        <label htmlFor="">Password:</label>
-                        <br />
+                        <label className='label-font' htmlFor="">Password: </label>
                         <input onChange={(e) => this.updatePassword(e)} type="text" />
                     </div>
                     <button onClick={() => this.login()} type='button'>Login</button>
                     <button onClick={() => this.signup()} type='button'>Signup</button>
-                </form>
+                    </form>
+                    </div>
             </div>
         )
     }

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { updateUser } from './../../redux/user';
+import { updateUser } from '../../redux/reducer';
 import { connect } from 'react-redux';
 import axios from 'axios';
 
@@ -12,10 +12,11 @@ class Private extends Component {
     }
 
     render() {
-        let { user } = this.props;
+        // let { user } = this.props;
         return (
             <div>
-                <h1>Account Information</h1>
+                <h2>Dashboard</h2>
+                {/* <h1>Account Information</h1>
                 <hr /><hr /><hr />
                 {
                     user.email ? (
@@ -26,10 +27,8 @@ class Private extends Component {
                             <p>Balance: {Math.floor((Math.random() + 1) * 100)}</p>
                         </div>
                     ) : <p>Please Log In</p>
-                }
-                <a href="http://localhost:4000/auth/logout">
-                    <button>Logout</button>
-                </a>
+                } */}
+
             </div>
         )
     }
